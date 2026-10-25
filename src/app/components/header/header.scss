@@ -6,4 +6,27 @@ header{
     padding-block: 8px;
     background-color: #000;
     align-items: center;
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        > span {
+            cursor: pointer;
+            &:hover{
+                color: #b5a7a7;
+            }
+        }
+        ul{
+            list-style-type: none;
+            li{
+                cursor: pointer;
+                &:hover{
+                    color: #b5a7a7;
+                }
+            }
+        }
+    }
 }
