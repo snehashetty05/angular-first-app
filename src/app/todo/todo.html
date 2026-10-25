@@ -1,10 +1,10 @@
 <h3>Todo List</h3>
 
+@if(todos().length === 0) {
+    <p>Loading....</p>
+}
 <ul class="todos">
     @for (todo of todos(); track todo.id) {
-        <li class="todos_item">
-            <input id="todo-{{todo.id}}" type="checkbox" [value]="todo.completed"/>
-            <label for="todo-{{todo.id}}">{{todo.title}}</label>
-        </li>
+        <app-todo-item [todo]="todo" (todoToggled)="updateTodo($event)"></app-todo-item>
     }
 </ul>
